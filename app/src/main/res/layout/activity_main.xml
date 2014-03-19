@@ -1,0 +1,52 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:layout_width="match_parent">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/debug_textview1"
+        android:text="test"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/debug_textview2"
+        android:text="test2"
+        />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        tools:context="it.francescopezzato.android.listbottompullup.app.MainActivity">
+
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_blue_bright"
+            android:id="@+id/list">
+
+        </ListView>
+
+        <FrameLayout
+            android:id="@+id/overlayed_footer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fake_footer_size"
+            android:background="@android:color/holo_red_dark"
+            android:layout_gravity="bottom"
+            android:visibility="gone"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/footer_art"
+                android:id="@+id/footer_image"
+                />
+        </FrameLayout>
+
+    </FrameLayout>
+</LinearLayout>
